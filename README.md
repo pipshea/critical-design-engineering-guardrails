@@ -21,6 +21,12 @@ templates/
 references/
   influences.md                    — the scholarship behind each statement
 adapters/                          — thin, tool-native pointers to the core
+.github/
+  pull_request_template.md         — statements 5, 9 & 10 at merge time
+  workflows/human-signs.yml        — CI: a PR merges only when a named human signs
+testing/
+  protocol.md                      — four probes for testing the guardrails per model/IDE
+  results.md                       — dated results matrix
 ```
 
 The core file is the single source of truth. Adapters are deliberately thin so nothing drifts.
@@ -45,9 +51,11 @@ The practice fires at four moments: writing specs (record the why), generating (
 
 The templates are meant to be committed to your repo, filled in, next to the code they explain — that is statement 5 working as intended.
 
+Two guardrails don't rely on the model at all: the PR template and the `human-signs` CI check make the signature mechanical. Model behaviour varies; the pipeline doesn't. And because models *are* different interpreters of the same guardrails, `testing/protocol.md` gives you four probes to measure how yours behaves — run it before trusting any tool with the stop behaviours.
+
 ## Fork it
 
-Guardrails are authored context; author them. Edit the behaviours to fit your practice, delete what doesn't serve, and record why in your commit messages. The manifesto's [source text lives in version control](https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4) with an open invitation to fork, and so does this.
+Guardrails are authored context; author them. Edit the behaviours to fit your practice, delete what doesn't serve, and record why in your commit messages. The manifesto's source text lives in [version control](https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4) with an open invitation to fork, and so does this.
 
 ## Credit and license
 
