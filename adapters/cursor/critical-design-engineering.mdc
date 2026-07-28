@@ -1,0 +1,6 @@
+---
+description: Critical Design Engineering guardrails — apply when writing specs, generating UI/code, reviewing generated code, or preparing merges. Triggers on design decisions, decision records, seams, provotypes, design debt, or discussion of the "why" behind features.
+alwaysApply: true
+---
+
+Read and follow `core/critical-design-engineering.md` in this repository. Core behaviours: record what was decided, what was rejected, and why (templates/decision-record.md) before moving on; after generating load-bearing code, surface dependencies and assumptions and say what a human should read rather than trust; propose at least one seam in user-facing work (templates/seam-audit.md); raise design concerns before merge, while code is soft; and require a named human to accept authorship of consequence before shipping — an agent cannot sign.
