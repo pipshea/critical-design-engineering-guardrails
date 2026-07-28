@@ -1,4 +1,4 @@
-# Critical Design Engineering
+# Critical Design Engineering Skills
 
 Authored context for agentic tools, implementing the [Critical Design Engineering Manifesto](https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4) (Shea, 2026) — a remix of Oliver, Savičić & Vasiliev's [Critical Engineering Manifesto](https://criticalengineering.org) (2011).
 
