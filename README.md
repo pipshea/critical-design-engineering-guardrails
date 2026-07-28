@@ -51,7 +51,13 @@ The practice fires at four moments: writing specs (record the why), generating (
 
 The templates are meant to be committed to your repo, filled in, next to the code they explain — that is statement 5 working as intended.
 
-Two guardrails don't rely on the model at all: the PR template and the `human-signs` CI check make the signature mechanical. Model behaviour varies; the pipeline doesn't. And because models *are* different interpreters of the same guardrails, `testing/protocol.md` gives you four probes to measure how yours behaves — run it before trusting any tool with the stop behaviours.
+Two guardrails don't rely on the model at all: the PR template and the `human-signs` CI check make the signature mechanical. Model behaviour varies; the pipeline doesn't.
+
+## A note on models
+
+These guardrails are a plan, and plans are resources for action, not determinants of it. Every model interprets them differently, and the differences are not the ones the spec sheets advertise. A large context window doesn't help much — the files are tiny; what matters is whether the model still *attends* to them an hour into a session. The failures run in two directions: a model that quietly drops the behaviours under the pressure of the coding task, and a model that performs them as ritual — decision records for every renamed variable, critique as decoration. The second failure looks like compliance and is the one most likely to make you delete the guardrails. Watch especially the stop behaviours: some models will mention the signature requirement while merging anyway.
+
+Statement 1 applies to the tool running these guardrails, too. Don't take any of this on faith — `testing/protocol.md` gives you four probes to measure how your model and IDE actually behave. Run it before trusting the stop behaviours.
 
 ## Fork it
 
