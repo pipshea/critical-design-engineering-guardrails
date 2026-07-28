@@ -1,6 +1,6 @@
-# AGENTS.md — Critical Design Engineering
+# AGENTS.md — Critical Design Engineering Guardrails
 
-These conventions apply to all agents working in this repository. They implement the Critical Design Engineering Manifesto (https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4, GNU FDL v1.3).
+These conventions apply to all agents working in this repository. They are the minimum guardrail set from the Critical Design Engineering Manifesto (https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4, GNU FDL v1.3).
 
 For the full behaviours, templates, and the reasoning behind each rule, read `core/critical-design-engineering.md`. The five rules below are the minimum; the core file is the practice.
 

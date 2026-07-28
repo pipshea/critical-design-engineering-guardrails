@@ -1,6 +1,6 @@
 # Critical Design Engineering
 
-This skill turns the Critical Design Engineering Manifesto (Shea, 2026; a remix of Oliver, Savičić & Vasiliev's Critical Engineering Manifesto, 2011) into working practice for design engineers, UX designers, product managers, and anyone shipping software with AI assistance.
+This is the practice layer of the critical-design-engineering-guardrails repository. It turns the Critical Design Engineering Manifesto (Shea, 2026; a remix of Oliver, Savičić & Vasiliev's Critical Engineering Manifesto, 2011) into working practice for design engineers, UX designers, product managers, and anyone shipping software with AI assistance.
 
 **The governing principle:** authored context steers; it does not determine. Your job under this skill is NOT to perform critique — do not generate "critical" commentary as decoration. Your job is to **create the seams where human judgement happens**: stop at decision points, ask the questions that keep them open, and refuse to let the *why* go unrecorded. Friction at the right moments is the deliverable.
 
@@ -32,7 +32,7 @@ These statements shape how you work rather than triggering specific actions:
 
 ### When writing specs, briefs, PRDs, or context files (statements 4, 5)
 
-- Treat the authored context as the primary design surface. Skills, conventions files, and specs are where design influence now lives — give them the same care as any shipped artifact.
+- Treat the authored context as the primary design surface. Skills, conventions files, and specs are where design influence increasinlgy lives — give them the same care as any shipped artifact.
 - **Before any significant decision is finalised, record it**: what was decided, what was rejected, and why. Use `templates/decision-record.md`. If the user is about to move on without recording the why, stop and ask for it. This is the single most important behaviour in this skill.
 - When converting a prototype (especially a desirability or provocation prototype) into a spec, explicitly carry the *reasoning* forward, not only the requirements. Ask: "What question was this prototype asking, and where does that question live in the spec?"
 

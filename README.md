@@ -1,8 +1,10 @@
-# Critical Design Engineering Skills
+# Critical Design Engineering Guardrails
 
-Authored context for agentic tools, implementing the [Critical Design Engineering Manifesto](https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4) (Shea, 2026) — a remix of Oliver, Savičić & Vasiliev's [Critical Engineering Manifesto](https://criticalengineering.org) (2011).
+Guardrails for agentic tools, implementing the [Critical Design Engineering Manifesto](https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4) (Shea, 2026) — a remix of Oliver, Savičić & Vasiliev's [Critical Engineering Manifesto](https://criticalengineering.org) (2011).
 
-The design knowledge is plain markdown. It works in any tool that reads markdown instructions — the process is the product, not the platform.
+The manifesto states the principles; this repository is their practice layer. The source text stays in [version control as a public gist](https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4) — this repo turns it into working guardrails for design engineers, UX designers, product managers, and anyone shipping software with AI assistance.
+
+The guardrails are plain markdown. They work in any tool that reads markdown instructions.
 
 **What it does:** turns eleven manifesto statements into agent behaviours. The agent records the *why* behind decisions before moving on, surfaces what generated code hides, proposes seams users can understand, configure and contest, raises design concerns while code is still soft, and requires a named human to accept authorship of consequence before anything ships. It creates the seams where human judgement happens; it does not perform critique.
 
@@ -45,7 +47,7 @@ The templates are meant to be committed to your repo, filled in, next to the cod
 
 ## Fork it
 
-This is authored context; author it. Edit the behaviours to fit your practice, delete what doesn't serve, and record why in your commit messages. The manifesto's canonical text lives in [version control](https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4) with an open invitation to fork, and so does this.
+Guardrails are authored context; author them. Edit the behaviours to fit your practice, delete what doesn't serve, and record why in your commit messages. The manifesto's [source text lives in version control](https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4) with an open invitation to fork, and so does this.
 
 ## Credit and license
 
