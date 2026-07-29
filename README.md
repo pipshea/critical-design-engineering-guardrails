@@ -1,6 +1,6 @@
 # Critical Design Engineering Guardrails
 
-Design engineering guardrails for critical collaboration with agentic IDEs. A reconfiguration of the [Critical Design Engineering Manifesto](https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4) (Shea, 2026) — a remix of Oliver, Savičić & Vasiliev's [Critical Engineering Manifesto](https://criticalengineering.org) (2011).
+Guardrails for agentic tools, implementing the [Critical Design Engineering Manifesto](https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4) (Shea, 2026) — a remix of Oliver, Savičić & Vasiliev's [Critical Engineering Manifesto](https://criticalengineering.org) (2011).
 
 The manifesto states the principles; this repository is their practice layer. The source text stays in [version control as a public gist](https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4) — this repo turns it into working guardrails for design engineers, UX designers, product managers, and anyone shipping software with AI assistance.
 
@@ -62,6 +62,10 @@ Statement 1 applies to the tool running these guardrails, too. Don't take any of
 ## Fork it
 
 Guardrails are authored context; author them. Edit the behaviours to fit your practice, delete what doesn't serve, and record why in your commit messages. The manifesto's source text lives in [version control](https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4) with an open invitation to fork, and so does this.
+
+## Acknowledgements
+
+The portable-markdown architecture — guidance as plain markdown, with thin per-tool adapters — follows the pattern of MC Dean's [Designpowers](https://github.com/Owl-Listener/designpowers) (MIT), which in turn credits the plugin architecture of Jesse Vincent's [Superpowers](https://github.com/obra/superpowers). The pattern is theirs; the guardrails are ours. Designpowers is also a working demonstration of what these guardrails argue for — a design practice authored in markdown — and is cited in `references/influences.md`.
 
 ## Credit and license
 
