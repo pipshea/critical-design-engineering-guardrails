@@ -18,6 +18,7 @@ templates/
   decision-record.md               — statement 5: decided / rejected / why / who's affected
   seam-audit.md                    — statement 3: hidden / revealed / understand-configure-contest
   provotype-brief.md               — statements 8 & 10: the question, and how to spot domestication
+  inclusion-check.md               — statements 6 & 7: the ability assumptions generated code ships with
 references/
   influences.md                    — the scholarship behind each statement
 adapters/                          — thin, tool-native pointers to the core
@@ -35,7 +36,7 @@ The core file is the single source of truth. Adapters are deliberately thin so n
 
 **Any tool that reads AGENTS.md** (most agentic IDEs now do): copy this repo's files into your project, or copy the conventions block from `AGENTS.md` into your existing one. Done.
 
-**Claude Code:** copy `adapters/claude-code/skills/critical-design-engineering/` into your project's `.claude/skills/` (or `~/.claude/skills/` for all projects), and keep `core/`, `templates/` and `references/` at the repo root where the skill can read them.
+**Claude Code:** copy `adapters/claude-code/skills/critical-design-engineering/` into your project's `.claude/skills/` (or `~/.claude/skills/` for all projects — though see "When to use" on scope), and keep `core/`, `templates/` and `references/` at the repo root where the skill can read them.
 
 **Cursor:** copy `adapters/cursor/critical-design-engineering.mdc` into `.cursor/rules/`.
 
@@ -44,6 +45,18 @@ The core file is the single source of truth. Adapters are deliberately thin so n
 **Gemini CLI:** copy the contents of `adapters/gemini-cli/GEMINI.md` into your project's `GEMINI.md`.
 
 **Anything else:** point the tool's context mechanism at `core/critical-design-engineering.md`. It is self-contained.
+
+## When to use
+
+Not everything here wants to be always-on. The guardrails come in three weights, and matching the weight to the moment is what keeps them useful rather than ritual.
+
+**Always-on: the stances.** The five conventions in `AGENTS.md` — and the thin Cursor rule, which carries the same — are cheap enough to persist. They change how the agent narrates and stops, not what it builds. Leave these on for any repo where the work ships to users.
+
+**At the moments: the practice.** The full core file and the templates are deliberate friction, and friction is only the deliverable at decision points. Fire them at the four moments — writing specs, reviewing generated work, the pre-merge window, the merge itself — rather than on every autocomplete and trivial refactor. Don't convert `core/critical-design-engineering.md` into an always-on rule: a seam proposal on every keystroke is how you manufacture the over-firing failure described in the note on models, and how a team comes to delete the guardrails. The practice inhabits the space between generation and shipping; summon it when you enter that window.
+
+**Mechanical only: a legitimate floor.** The PR template and the `human-signs` CI check need no model cooperation at all. A team that adopts only these has adopted the most important guardrail. Start there if the rest feels like too much — the floor is real adoption, not a compromise.
+
+One note on scope: install per-repo, where the work is user-facing and consequential. Scratch projects, spikes, and one-off scripts don't need seam audits, and a global install that fires everywhere teaches people to ignore it everywhere. The guardrails belong where consequence lives.
 
 ## Use
 
@@ -65,7 +78,7 @@ Guardrails are authored context; author them. Edit the behaviours to fit your pr
 
 ## Acknowledgements
 
-The portable-markdown architecture — guidance as plain markdown, with thin per-tool adapters — follows the pattern of MC Dean's [Designpowers](https://github.com/Owl-Listener/designpowers) (MIT), which in turn credits the plugin architecture of Jesse Vincent's [Superpowers](https://github.com/obra/superpowers). The pattern is theirs; the guardrails are ours. Designpowers is also a working demonstration of what these guardrails argue for — a design practice authored in markdown — and is cited in `references/influences.md`.
+The portable-markdown architecture — guidance as plain markdown, with thin per-tool adapters — follows the pattern of MC Dean's [Designpowers](https://github.com/Owl-Listener/designpowers) (MIT), which in turn credits the plugin architecture of Jesse Vincent's [Superpowers](https://github.com/obra/superpowers). The pattern is theirs; the guardrails are ours. Designpowers is also a working demonstration of what these guardrails argue for — a design practice authored in markdown — and is cited in `references/influences.md`. The inclusion check's design-layer framing follows her [inclusive-design-skills](https://github.com/Owl-Listener/inclusive-design-skills) (MIT) — accessibility as a design commitment, not a code review — while drawing its substance from the public standards she also builds on: WCAG 2.2, COGA, and Microsoft's Inclusive Design Toolkit.
 
 ## Credit and license
 

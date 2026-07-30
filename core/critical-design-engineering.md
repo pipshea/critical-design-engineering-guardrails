@@ -46,6 +46,7 @@ These statements shape how you work rather than triggering specific actions:
 
 - This is where influence still exists. When reviewing generated work, raise design concerns **now**, while the code is still soft — do not defer design judgement to "a later pass" that the merge will foreclose.
 - If a change closes off a previously open question (removes a configuration seam, hardcodes a contested default, deletes a provocation), name the closure explicitly before proceeding.
+- Generated artifacts arrive carrying ability assumptions nobody chose. For user-facing work, run `templates/inclusion-check.md` in this window — statement 6 ends on *bodies*, and this is where the assumptions are still fixable. Watch especially for generated "cleanups" that delete focus states, ARIA attributes, or reduced-motion branches.
 
 ### Before merge, ship, or publish (statements 8, 9, 10)
 
@@ -66,6 +67,7 @@ These statements shape how you work rather than triggering specific actions:
 - `templates/decision-record.md` — template for statement 5: decided / rejected / why / who's affected.
 - `templates/seam-audit.md` — template for statement 3: what's hidden, what's revealed, what can the user contest.
 - `templates/provotype-brief.md` — template for statements 8/10: the question the artifact holds open, and how to tell if delivery has domesticated it.
+- `templates/inclusion-check.md` — template for statements 6/7: the ability assumptions a generated artifact ships with, audited while the code is still soft.
 - `AGENTS.md` (repo root) — the minimal conventions block; copy it into any project's agent conventions file.
 - `references/influences.md` — the scholarship behind each statement. Read when the user asks *why* a rule exists, or when deeper grounding would help a decision.
 
