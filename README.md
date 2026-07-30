@@ -1,5 +1,11 @@
 # Critical Design Engineering Guardrails
 
+```
+══════════════════════
+  o───o───●───o───▶
+══════════════════════
+```
+
 Design engineering guardrails for critical collaboration with agentic IDEs. Operationalising the [Critical Design Engineering Manifesto](https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4) (Shea, 2026) — a remix of Oliver, Savičić & Vasiliev's [Critical Engineering Manifesto](https://criticalengineering.org) (2011).
 
 The manifesto states the principles; this repository is their practice layer. The source text stays in [version control as a public gist](https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4) — this repo turns it into working guardrails for design engineers, UX designers, product managers, and anyone shipping software with AI assistance.
@@ -9,6 +15,13 @@ The guardrails are plain markdown. They work in any tool that reads markdown ins
 **What it does:** turns eleven manifesto statements into agent behaviours. The agent records the *why* behind decisions before moving on, surfaces what generated code hides, proposes seams users can understand, configure and contest, raises design concerns while code is still soft, and requires a named human to accept authorship of consequence before anything ships. It creates the seams where human judgement happens; it does not perform critique.
 
 ## Layout
+
+```
+●──┬──o
+   ├──o
+   ├──o
+   └──o
+```
 
 ```
 AGENTS.md                          — the five conventions; the universal entry point
@@ -34,6 +47,12 @@ The core file is the single source of truth. Adapters are deliberately thin so n
 
 ## Install
 
+```
+      o
+      ↓
+o───o───●───▶
+```
+
 **Any tool that reads AGENTS.md** (most agentic IDEs now do): copy this repo's files into your project, or copy the conventions block from `AGENTS.md` into your existing one. Done.
 
 **Claude Code:** copy `adapters/claude-code/skills/critical-design-engineering/` into your project's `.claude/skills/` (or `~/.claude/skills/` for all projects — though see the scope note under "Use"), and keep `core/`, `templates/` and `references/` at the repo root where the skill can read them.
@@ -47,6 +66,11 @@ The core file is the single source of truth. Adapters are deliberately thin so n
 **Anything else:** point the tool's context mechanism at `core/critical-design-engineering.md`. It is self-contained.
 
 ## Use
+
+```
+o───o───o───●───▶
+↑   ↑   ↑   ↑
+```
 
 The practice fires at four moments: writing specs (record the why), generating (surface the workings, propose seams), the window between generation and shipping (raise concerns while code is soft), and before merge (what does this close, who is affected, which human signs). The templates are meant to be committed to your repo, filled in, next to the code they explain — that is statement 5 working as intended.
 
@@ -62,11 +86,23 @@ And for work that merges: the repo includes a pull request template and a `human
 
 ## A note on models
 
+```
+        ┌──▶
+o───●───┼──▶
+        └──▶
+```
+
 These guardrails are a plan, and plans are resources for action, not determinants of it. Every model interprets them differently, and the differences are not the ones the spec sheets advertise. A large context window doesn't help much — the files are tiny; what matters is whether the model still *attends* to them an hour into a session. The failures run in two directions: a model that quietly drops the behaviours under the pressure of the coding task, and a model that performs them as ritual — decision records for every renamed variable, critique as decoration. The second failure looks like compliance and is the one most likely to make you delete the guardrails. Watch especially the stop behaviours: some models will mention the signature requirement while merging anyway.
 
 Statement 1 applies to the tool running these guardrails, too. Don't take any of this on faith — `testing/protocol.md` gives you four probes to measure how your model and IDE actually behave. Run it before trusting the stop behaviours.
 
 ## Fork it
+
+```
+o───●───o───▶
+     \
+      o───▶
+```
 
 Guardrails are authored context; author them. Edit the behaviours to fit your practice, delete what doesn't serve, and record why in your commit messages. The manifesto's source text lives in [version control](https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4) with an open invitation to fork, and so does this.
 
