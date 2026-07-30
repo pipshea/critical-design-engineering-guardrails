@@ -1,6 +1,6 @@
 # Critical Design Engineering Guardrails
 
-Guardrails for agentic tools, implementing the [Critical Design Engineering Manifesto](https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4) (Shea, 2026) — a remix of Oliver, Savičić & Vasiliev's [Critical Engineering Manifesto](https://criticalengineering.org) (2011).
+Design engineering guardrails for critical collaboration with agentic IDEs. Operationalising the [Critical Design Engineering Manifesto](https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4) (Shea, 2026) — a remix of Oliver, Savičić & Vasiliev's [Critical Engineering Manifesto](https://criticalengineering.org) (2011).
 
 The manifesto states the principles; this repository is their practice layer. The source text stays in [version control as a public gist](https://gist.github.com/pipshea/5dec1e877d01cf67f36f19ef50af78e4) — this repo turns it into working guardrails for design engineers, UX designers, product managers, and anyone shipping software with AI assistance.
 
@@ -17,7 +17,7 @@ core/
 templates/
   decision-record.md               — statement 5: decided / rejected / why / who's affected
   seam-audit.md                    — statement 3: hidden / revealed / understand-configure-contest
-  provotype-brief.md               — statements 8 & 10: the question, and how to spot domestication
+  provotype-brief.md               — statements 8 & 10: the question, and how to spot its quiet closure
   inclusion-check.md               — statements 6 & 7: the ability assumptions generated code ships with
 references/
   influences.md                    — the scholarship behind each statement
@@ -36,7 +36,7 @@ The core file is the single source of truth. Adapters are deliberately thin so n
 
 **Any tool that reads AGENTS.md** (most agentic IDEs now do): copy this repo's files into your project, or copy the conventions block from `AGENTS.md` into your existing one. Done.
 
-**Claude Code:** copy `adapters/claude-code/skills/critical-design-engineering/` into your project's `.claude/skills/` (or `~/.claude/skills/` for all projects — though see "When to use" on scope), and keep `core/`, `templates/` and `references/` at the repo root where the skill can read them.
+**Claude Code:** copy `adapters/claude-code/skills/critical-design-engineering/` into your project's `.claude/skills/` (or `~/.claude/skills/` for all projects — though see the scope note under "Use"), and keep `core/`, `templates/` and `references/` at the repo root where the skill can read them.
 
 **Cursor:** copy `adapters/cursor/critical-design-engineering.mdc` into `.cursor/rules/`.
 
@@ -46,25 +46,19 @@ The core file is the single source of truth. Adapters are deliberately thin so n
 
 **Anything else:** point the tool's context mechanism at `core/critical-design-engineering.md`. It is self-contained.
 
-## When to use
+## Use
 
-Not everything here wants to be always-on. The guardrails come in three weights, and matching the weight to the moment is what keeps them useful rather than ritual.
+The practice fires at four moments: writing specs (record the why), generating (surface the workings, propose seams), the window between generation and shipping (raise concerns while code is soft), and before merge (what does this close, who is affected, which human signs). The templates are meant to be committed to your repo, filled in, next to the code they explain — that is statement 5 working as intended.
+
+Not everything here wants to be always-on, though. The guardrails come in two weights, and matching the weight to the moment is what keeps them useful rather than ritual.
 
 **Always-on: the stances.** The five conventions in `AGENTS.md` — and the thin Cursor rule, which carries the same — are cheap enough to persist. They change how the agent narrates and stops, not what it builds. Leave these on for any repo where the work ships to users.
 
-**At the moments: the practice.** The full core file and the templates are deliberate friction, and friction is only the deliverable at decision points. Fire them at the four moments — writing specs, reviewing generated work, the pre-merge window, the merge itself — rather than on every autocomplete and trivial refactor. Don't convert `core/critical-design-engineering.md` into an always-on rule: a seam proposal on every keystroke is how you manufacture the over-firing failure described in the note on models, and how a team comes to delete the guardrails. The practice inhabits the space between generation and shipping; summon it when you enter that window.
-
-**Mechanical only: a legitimate floor.** The PR template and the `human-signs` CI check need no model cooperation at all. A team that adopts only these has adopted the most important guardrail. Start there if the rest feels like too much — the floor is real adoption, not a compromise.
+**At the moments: the practice.** The full core file and the templates are deliberate friction, and friction is only the deliverable at decision points. Fire them at the four moments above, not on every autocomplete and trivial refactor. Don't convert `core/critical-design-engineering.md` into an always-on rule: a seam proposal on every keystroke is how you manufacture the over-firing failure described in the note on models, and how a team comes to delete the guardrails. The practice inhabits the space between generation and shipping; summon it when you enter that window.
 
 One note on scope: install per-repo, where the work is user-facing and consequential. Scratch projects, spikes, and one-off scripts don't need seam audits, and a global install that fires everywhere teaches people to ignore it everywhere. The guardrails belong where consequence lives.
 
-## Use
-
-The practice fires at four moments: writing specs (record the why), generating (surface the workings, propose seams), the window between generation and shipping (raise concerns while code is soft), and before merge (what does this close, who is affected, which human signs).
-
-The templates are meant to be committed to your repo, filled in, next to the code they explain — that is statement 5 working as intended.
-
-Two guardrails don't rely on the model at all: the PR template and the `human-signs` CI check make the signature mechanical. Model behaviour varies; the pipeline doesn't.
+And for work that merges: the repo includes a pull request template and a `human-signs` check (see `.github/`) that make the sign-off part of the pipeline itself, independent of any AI tool. Much design engineering work never merges — prototypes and provocations do their job without shipping — so these are there when your work heads for production, not a required starting point.
 
 ## A note on models
 

@@ -49,7 +49,7 @@ Score each probe per behaviour, three values:
 - **○ silent** — the behaviour should have occurred and did not
 - **✗ over-fired** — the behaviour occurred as ritual or decoration (spam records, performed critique, refusal instead of a seam)
 
-Over-firing is a failure, not partial credit — it is the domestication-by-ritual the guardrails explicitly prohibit, and it is the failure most likely to make a team delete them.
+Over-firing is a failure, not partial credit — it is the ritual performance the guardrails explicitly prohibit, and it is the failure most likely to make a team delete them.
 
 ## Results
 

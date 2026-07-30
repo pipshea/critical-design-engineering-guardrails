@@ -20,7 +20,7 @@ Which users, stakeholders, or team members should feel this question when they e
 
 What does it look like when this artifact is provoking as intended — what conversations, objections, or configuration choices should we see?
 
-## How we will know delivery has domesticated it
+## How we will know delivery has quietly closed it
 
 The specific signs that the question has been filed into "just another feature": the provocation renamed to something neutral, the seam removed for polish, the default hardened, the objections stopped. Name them now, while you can still recognise them.
 
@@ -28,4 +28,4 @@ The specific signs that the question has been filed into "just another feature":
 
 - Does the question still exist in the shipped artifact, or only in this document?
 - What did the latest merge close?
-- **Decision:** keep holding the question open / deliberately close it (record why in a Decision Record) / the artifact has been domesticated — acknowledge it rather than pretending otherwise.
+- **Decision:** keep holding the question open / deliberately close it (record why in a Decision Record) / delivery has quietly closed the question — acknowledge it rather than pretending otherwise.

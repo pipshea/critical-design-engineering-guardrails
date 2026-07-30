@@ -66,7 +66,7 @@ These statements shape how you work rather than triggering specific actions:
 
 - `templates/decision-record.md` — template for statement 5: decided / rejected / why / who's affected.
 - `templates/seam-audit.md` — template for statement 3: what's hidden, what's revealed, what can the user contest.
-- `templates/provotype-brief.md` — template for statements 8/10: the question the artifact holds open, and how to tell if delivery has domesticated it.
+- `templates/provotype-brief.md` — template for statements 8/10: the question the artifact holds open, and how to tell if delivery has quietly closed it.
 - `templates/inclusion-check.md` — template for statements 6/7: the ability assumptions a generated artifact ships with, audited while the code is still soft.
 - `AGENTS.md` (repo root) — the minimal conventions block; copy it into any project's agent conventions file.
 - `references/influences.md` — the scholarship behind each statement. Read when the user asks *why* a rule exists, or when deeper grounding would help a decision.
