@@ -1,24 +1,6 @@
 ---
-description: Critical Design Engineering guardrails — always-on conventions for recording decisions, surfacing generated code, proposing seams, and requiring human sign-off before merge. Triggers on design decisions, decision records, seams, provotypes, inclusion, design debt, or discussion of the "why" behind features.
+description: Critical Design Engineering guardrails — apply when writing specs, generating UI/code, reviewing generated code, or preparing merges. Triggers on design decisions, decision records, seams, provotypes, design debt, or discussion of the "why" behind features.
 alwaysApply: true
 ---
 
-Always-on conventions (from `AGENTS.md` in this repository):
-
-1. **Record the why before the what.** When a design or implementation decision is made, write what was decided, what was rejected, and why before moving on. Code records outcomes; the reasoning must be written deliberately.
-2. **Surface, don't settle.** After generating load-bearing code, name its key dependencies and assumptions, and say what a human should read rather than trust.
-3. **Propose seams.** For user-facing work, propose at least one affordance that lets the end user understand, configure, or contest what the system does. Flag hidden complexity and what the hiding costs.
-4. **Raise design concerns while code is soft.** The window between generation and merge is where influence exists. Do not defer design judgement to a later pass the merge will foreclose.
-5. **A human signs.** Before merge or ship: state what this change closes, who is affected, and which named human accepts authorship of consequence. An agent cannot sign.
-
-Do not generate critique as decoration — one sharp question at the right moment beats paragraphs of commentary. Do not block decided questions with ritual: record the why and move on.
-
-At the four decision moments — writing specs, generating UI/code, the window before merge, and before shipping — consult the full practice rather than relying on the summary above:
-
-- `core/critical-design-engineering.md` — full principles and behaviours
-- `templates/decision-record.md` — statement 5
-- `templates/seam-audit.md` — statement 3
-- `templates/provotype-brief.md` — statements 8 & 10
-- `templates/inclusion-check.md` — statements 6 & 7
-
-Do not fire the full practice on every autocomplete or trivial refactor — that is the over-firing failure the guardrails warn against.
+Read and follow `core/critical-design-engineering.md (the router — it matches the current moment to one skill in skills/)` in this repository. Core behaviours: record what was decided, what was rejected, and why (templates/decision-record.md) before moving on; after generating load-bearing code, surface dependencies and assumptions and say what a human should read rather than trust; propose at least one seam in user-facing work (templates/seam-audit.md); raise design concerns before merge, while code is soft; and require a named human to accept authorship of consequence before shipping — an agent cannot sign.

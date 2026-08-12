@@ -7,7 +7,8 @@ Scoring: ✓ fired · ○ silent · ✗ over-fired (see `protocol.md`). One row 
 | | | | | 1 — spec | | – | – | – | |
 | | | | | 2 — generation | – | | | – | |
 | | | | | 3 — the stop | – | – | – | | |
-| | | | | 4 — drift (re-run 2) | – | | | – | |
+| | | | | 4 — contested direction | – | – | – | – | contest staged? handed back? |
+| | | | | 5 — drift (re-run 2) | – | | | – | |
 
 ## Observations
 

@@ -26,7 +26,13 @@ The guardrails are plain markdown. They work in any tool that reads markdown ins
 ```
 AGENTS.md                          — the five conventions; the universal entry point
 core/
-  critical-design-engineering.md   — the full practice: principles, behaviours, limits
+  critical-design-engineering.md   — the router: stances, and which skill fires at which moment
+skills/
+  spec-why.md                      — statements 4 & 5: record the why; carry the prototype's question
+  generation-review.md             — statements 1 & 3: surface the workings; propose seams
+  window.md                        — statements 6 & 7: the pre-merge window; the inclusion check
+  merge.md                         — statements 8–10: what closes, who's affected, who signs
+  design-contest.md                — statement 8: stage competing cases before consensus
 templates/
   decision-record.md               — statement 5: decided / rejected / why / who's affected
   seam-audit.md                    — statement 3: hidden / revealed / understand-configure-contest
@@ -43,7 +49,7 @@ testing/
   results.md                       — dated results matrix
 ```
 
-The core file is the single source of truth. Adapters are deliberately thin so nothing drifts.
+The router in `core/` is the entry point: it holds the always-on stances and routes each moment to one skill. Adapters are deliberately thin so nothing drifts.
 
 ## Install
 
@@ -78,7 +84,7 @@ Not everything here wants to be always-on, though. The guardrails come in two we
 
 **Always-on: the stances.** The five conventions in `AGENTS.md` — and the thin Cursor rule, which carries the same — are cheap enough to persist. They change how the agent narrates and stops, not what it builds. Leave these on for any repo where the work ships to users.
 
-**At the moments: the practice.** The full core file and the templates are deliberate friction, and friction is only the deliverable at decision points. Fire them at the four moments above, not on every autocomplete and trivial refactor. Don't convert `core/critical-design-engineering.md` into an always-on rule: a seam proposal on every keystroke is how you manufacture the over-firing failure described in the note on models, and how a team comes to delete the guardrails. The practice inhabits the space between generation and shipping; summon it when you enter that window.
+**At the moments: the practice.** The skills in `skills/` and their templates are deliberate friction, and friction is only the deliverable at decision points. The router matches each moment to one skill — including `design-contest`, summoned when directions compete and consensus is arriving before the alternatives have been argued. Fire them at their moments, not on every autocomplete and trivial refactor. Don't convert the skills into always-on rules: a seam proposal on every keystroke is how you manufacture the over-firing failure described in the note on models, and how a team comes to delete the guardrails. The practice inhabits the space between generation and shipping; summon it when you enter that window.
 
 One note on scope: install per-repo, where the work is user-facing and consequential. Scratch projects, spikes, and one-off scripts don't need seam audits, and a global install that fires everywhere teaches people to ignore it everywhere. The guardrails belong where consequence lives.
 

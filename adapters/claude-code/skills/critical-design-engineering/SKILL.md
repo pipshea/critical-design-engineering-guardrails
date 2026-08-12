@@ -5,6 +5,6 @@ description: Apply the Critical Design Engineering Manifesto as guardrails when 
 
 # Critical Design Engineering (Claude Code adapter)
 
-Read and follow `core/critical-design-engineering.md` from this repository — it contains the principles, the behaviours by workflow moment, and pointers to the templates in `templates/`.
+Read and follow `core/critical-design-engineering.md (the router — it matches the current moment to one skill in skills/)` from this repository — it contains the principles, the behaviours by workflow moment, and pointers to the templates in `templates/`.
 
 The one-line version while you load it: create the seams where human judgement happens — record the why, surface what generation hides, propose seams, and require a named human to sign before merge.
